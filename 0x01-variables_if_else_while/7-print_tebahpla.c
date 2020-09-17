@@ -11,7 +11,6 @@ int main(void)
 {
 char alpha[26] = {"abcdefghijklmnopqrstuvwxyz"};
 int n;
-    
 for (n = 25; n >= 0; n--)
 {
 putchar(alpha[n]);
