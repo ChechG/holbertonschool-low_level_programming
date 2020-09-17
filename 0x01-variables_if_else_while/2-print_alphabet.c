@@ -9,9 +9,9 @@
  */
 int main(void)
 {
-char alpha[27] = {"abcdefghijklmnopqrstuvwxyz"};
+char alpha[28] = {"abcdefghijklmnopqrstuvwxyz"};
 int n;
-for (n = 0; n < 27; n++)
+for (n = 0; n < 28; n++)
 {
 putchar(alpha[n]);
 }

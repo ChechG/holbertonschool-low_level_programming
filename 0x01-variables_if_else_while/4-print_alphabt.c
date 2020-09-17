@@ -14,7 +14,9 @@ int n;
 for (n = 0; n < 27; n++)
 {
 if (alpha[n] != 'e' && alpha[n] != 'q')
+{
 putchar(alpha[n]);
+}
 }
 putchar('\n');
 return (0);
