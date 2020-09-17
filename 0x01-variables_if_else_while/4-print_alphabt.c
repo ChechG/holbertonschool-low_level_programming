@@ -9,9 +9,9 @@
  */
 int main(void)
 {
-char alpha[52] = {"abcdefghijklmnopqrstuvwxyz"};
+char alpha[27] = {"abcdefghijklmnopqrstuvwxyz"};
 int n;
-for (n = 0; n < 52; n++)
+for (n = 0; n < 27; n++)
 {
 if (alpha[n] != 'e' && alpha[n] != 'q')
 putchar(alpha[n]);

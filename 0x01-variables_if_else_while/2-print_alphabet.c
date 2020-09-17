@@ -11,11 +11,10 @@ int main(void)
 {
 char alpha[27] = {"abcdefghijklmnopqrstuvwxyz"};
 int n;
-char line = '\n';
 for (n = 0; n < 27; n++)
 {
 putchar(alpha[n]);
 }
-putchar(line);
+putchar('\n');
 return (0);
 }
