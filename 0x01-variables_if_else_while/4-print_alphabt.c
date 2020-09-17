@@ -9,9 +9,9 @@
  */
 int main(void)
 {
-char alpha[27] = {"abcdefghijklmnopqrstuvwxyz"};
+char alpha[26] = {"abcdefghijklmnopqrstuvwxyz"};
 int n;
-for (n = 0; n < 27; n++)
+for (n = 0; n < 26; n++)
 {
 if (alpha[n] != 'e' && alpha[n] != 'q')
 {
