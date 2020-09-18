@@ -26,7 +26,7 @@ putchar(b);
 putchar(32);
 putchar(c);
 putchar(d);
-if (a + b < 113)
+if (a != 57 || b != 56 || c != 57 || d != 57)
 {
 putchar(44);
 putchar(32);
