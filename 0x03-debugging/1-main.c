@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
- * main - while() causes an infinite loop
+ * main - while() causes an infinite loop because @i is not incrementing
  * Return: 0
  */
 
