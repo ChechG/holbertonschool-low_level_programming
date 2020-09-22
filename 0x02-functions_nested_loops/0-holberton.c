@@ -1,5 +1,9 @@
 #include "holberton.h"
-
+/**
+ * _putchar - check the code for Holberton School students.
+ *
+ * Return: Always 0.
+ */
 int main(void){
   char a[9] = "Holberton";
   int b;
