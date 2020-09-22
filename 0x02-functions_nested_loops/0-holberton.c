@@ -1,6 +1,6 @@
 #include "holberton.h"
 /**
- * _putchar - check the code for Holberton School students.
+ * main - check the code for Holberton School students.
  *
  * Return: Always 0.
  */
