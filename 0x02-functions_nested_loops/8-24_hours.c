@@ -1,4 +1,9 @@
 #include "holberton.h"
+/**
+ * jack_bauer - check the code for Holberton School students.
+ *
+ * Return: void.
+ */
 void jack_bauer(void)
 {
 int h1, h2, m1, m2;
