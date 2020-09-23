@@ -9,13 +9,13 @@ void fibonacci(void)
 signed long int a, fib, fib_ant, fib2;
 fib = 1;
 fib_ant = 0;
-for (a = 0; a <= 48; a++)
+for (a = 0; a <= 49; a++)
 {
 fib2 = fib + fib_ant;
 printf("%ld", fib2);
 fib_ant = fib;
 fib = fib2;
-if (a != 48)
+if (a != 49)
 {
 printf(", ");
 }
