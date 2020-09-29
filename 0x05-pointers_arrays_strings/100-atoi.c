@@ -37,7 +37,7 @@ for (; (s[x] >= '0' && s[x] <= '9') && (s[x] != '\0'); x++)
 {
 fin = x;
 }
-for(; fin >= ini; fin--, z++)
+for (; fin >= ini; fin--, z++)
 {
 res += ((s[fin] - '0') * _pow(z)) * sig;
 }
