@@ -1,20 +1,8 @@
 #include "holberton.h"
 #include <stdio.h>
-/**
- * _pow - check the code for Holberton School students.
- * @n: string pointer to be determined.
- * Return: int.
- */
-int _pow(int n)
-{
-int res = 1;
-int i;
-for (i = 0; i < n; i++)
-{
-res *= 10;
-}
-return (res);
-}
+
+int _pow(int n);
+
 /**
  * _atoi - check the code for Holberton School students.
  * @s: string pointer to be determined.
@@ -41,6 +29,22 @@ fin = x;
 for (; fin >= ini; fin--, z++)
 {
 res += ((s[fin] - '0') * _pow(z)) * sig;
+}
+return (res);
+}
+
+/**
+ * _pow - check the code for Holberton School students.
+ * @n: string pointer to be determined.
+ * Return: int.
+ */
+int _pow(int n)
+{
+int res = 1;
+int i;
+for (i = 0; i < n; i++)
+{
+res *= 10;
 }
 return (res);
 }
