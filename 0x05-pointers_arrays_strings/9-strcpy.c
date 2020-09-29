@@ -14,7 +14,7 @@ int b;
 while (src[a] != '\0')
 a++;
 
-for (b = 0; b < a; b++)
+for (b = 0; b <= a; b++)
 {
 dest[b] = src[b];
 }
