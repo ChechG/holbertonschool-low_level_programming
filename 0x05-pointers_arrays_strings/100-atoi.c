@@ -1,4 +1,5 @@
 #include "holberton.h"
+#include <stdio.h>
 /**
  * _pow - check the code for Holberton School students.
  * @n: string pointer to be determined.
