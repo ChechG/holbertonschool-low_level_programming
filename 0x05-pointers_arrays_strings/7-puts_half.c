@@ -1,5 +1,4 @@
 #include "holberton.h"
-#include <string.h>
 /**
  * puts_half - check the code for Holberton School students.
  * @str: string pointer to be determined.
@@ -8,7 +7,10 @@
 void puts_half(char *str)
 {
 int x, y;
-x = strlen(str);
+x = 0;
+while (str[x] != '\0')
+x++;
+
 if (x % 2 == 0)
 y = x / 2;
 else
