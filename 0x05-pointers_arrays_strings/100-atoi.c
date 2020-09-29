@@ -7,7 +7,8 @@
 int _pow(int n)
 {
 int res = 1;
-for (int i = 0; i < n; i++)
+int i;
+for (i = 0; i < n; i++)
 {
 res *= 10;
 }
