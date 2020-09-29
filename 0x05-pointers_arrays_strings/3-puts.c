@@ -1,5 +1,4 @@
 #include "holberton.h"
-#include <string.h>
 /**
  * _puts - check the code for Holberton School students.
  * @str: char string to be determined.
@@ -8,7 +7,7 @@
 void _puts(char *str)
 {
 unsigned int a;
-int n = 0;
+unsigned int n = 0;
 while (str[n] != '\0')
 n++;
 
