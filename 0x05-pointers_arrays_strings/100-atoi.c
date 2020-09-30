@@ -10,27 +10,40 @@ int _pow(int n);
  */
 int _atoi(char *s)
 {
-int ini, fin, x, z, res, sig;
-sig = 1;
-res = 0;
-z = 0;
-for (x = 0; s[x] < '0' || s[x] > '9'; x++)
-{
-if (s[x] == '-')
-{
-sig *= -1;
-}
-}
-ini = x;
-for (; (s[x] >= '0' && s[x] <= '9') && (s[x] != '\0'); x++)
-{
-fin = x;
-}
-for (; fin >= ini; fin--, z++)
-{
-res += ((s[fin] - '0') * _pow(z)) * sig;
-}
-return (res);
+	int ini, fin, x, z, res, sig;
+
+	sig = 1;
+	res = 0;
+	z = 0;
+
+	for (x = 0; s[x] != '\0'; x++)
+	{
+		if (s[x] == '-')
+		{
+			sig *= -1;
+		}
+		if (s[x] >= '0' && s[x] <= '9')
+		{
+			break;
+		}
+	}
+	if (s[x] == '\0')
+	{
+		return (0);
+	}
+	else
+	{
+		ini = x;
+		for (; s[x] >= '0' && s[x] <= '9'; x++)
+		{
+			fin = x;
+		}
+		for (; fin >= ini; fin--, z++)
+		{
+			res += ((s[fin] - '0') * _pow(z)) * sig;
+		}
+		return (res);
+	}
 }
 
 /**
