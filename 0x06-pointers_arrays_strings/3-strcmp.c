@@ -18,8 +18,8 @@ int _strcmp(char *s1, char *s2)
 		else
 		{
 			int b = s1[i] - s2[i];
+
 			return (b);
-			break;
 		}
 	}
 	return (0);
