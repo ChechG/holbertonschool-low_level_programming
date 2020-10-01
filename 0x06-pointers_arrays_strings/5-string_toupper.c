@@ -1,4 +1,4 @@
-B#include "holberton.h"
+#include "holberton.h"
 /**
  * _strlen - check the code for Holberton School students.
  * @s: pinter to int to be determined.
