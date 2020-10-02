@@ -22,9 +22,9 @@ void print_buffer(char *b, int size)
 			printf("%02x%02x ", b[i + 8], b[i + 9]);
 			for (i2 = cont; i2 < cont + 10; i2 += 10)
 			{
-				for (p = 0; p < 11; p++)
+				for (p = 0; p < 10; p++)
 				{
-					if (b[i + p] >= 0 && b[i + p] <= 32)
+					if (b[i + p] >= 0 && b[i + p] <= 31)
 					{
 						putchar(46);
 					}
