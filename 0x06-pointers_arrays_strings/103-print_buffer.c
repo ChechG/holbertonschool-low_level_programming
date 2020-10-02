@@ -8,8 +8,8 @@
  */
 void print_buffer(char *b, int size)
 {
-	int cont = 0, i, i2, i3;
-	i3 = 0;
+	int cont = 0, i, i2;
+
 	for (i = 0; i <= size; i += 10)
 	{
 		printf("%08x: ", cont);
