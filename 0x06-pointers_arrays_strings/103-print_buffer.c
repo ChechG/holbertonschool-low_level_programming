@@ -18,9 +18,18 @@ void print_buffer(char *b, int size)
 		printf("%02x%02x ", b[i + 4], b[i + 5]);
 		printf("%02x%02x ", b[i + 6], b[i + 7]);
 		cont = cont + 10;
-		for (i2 = i3; i2 < i3 + 10; i2++)
+		for (i2 = cont; i2 < cont + 10; i2 += 10)
 		{
 			putchar(b[i2]);
+			putchar(b[i2 + 1]);
+			putchar(b[i2 + 2]);
+			putchar(b[i2 + 3]);
+			putchar(b[i2 + 4]);
+			putchar(b[i2 + 5]);
+			putchar(b[i2 + 6]);
+			putchar(b[i2 + 7]);
+			putchar(b[i2 + 8]);
+			putchar(b[i2 + 9]);
 		}
 		if(i % 10 == 0)
 		{
