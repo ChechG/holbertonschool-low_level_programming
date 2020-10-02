@@ -10,8 +10,7 @@ void print_buffer(char *b, int size)
 {
 	if (size > 0)
 	{
-		int cont = 0, i, i2, i3;
-		i3 = 0;
+		int cont = 0, i, i2;
 		int p = 0;
 		for (i = 0; i < size; i += 10)
 		{
