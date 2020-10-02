@@ -1,3 +1,11 @@
+#include <stdio.h>
+#include "holberton.h"
+/**
+ * print_buffer - check the code for Holberton School students.
+ * @b: pinter to int to be determined.
+ * @size: int.
+ * Return: void.
+ */
 void print_buffer(char *b, int size)
 {
 	int cont = 0, i, i2, i3;
