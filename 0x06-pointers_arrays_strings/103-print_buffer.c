@@ -18,6 +18,10 @@ void print_buffer(char *b, int size)
 		printf("%02x%02x ", b[i + 4], b[i + 5]);
 		printf("%02x%02x ", b[i + 6], b[i + 7]);
 		cont = cont + 10;
+		for (i2 = i3; i2 < i3 + 10; i2++)
+		{
+			putchar(b[i2]);
+		}
 		if(i % 10 == 0)
 		{
 			putchar('\n');
