@@ -12,6 +12,7 @@ void print_buffer(char *b, int size)
 	{
 		int cont = 0, i, i2;
 		int p = 0;
+
 		for (i = 0; i < size; i += 10)
 		{
 			printf("%08x: ", cont);
@@ -29,13 +30,13 @@ void print_buffer(char *b, int size)
 						putchar(46);
 					}
 					else
-						putchar(b[i+ p]);
+						putchar(b[i + p]);
 				}
 
 			}
 
 			cont = cont + 10;
-			if(i % 10 == 0)
+			if (i % 10 == 0)
 			{
 				putchar('\n');
 			}
