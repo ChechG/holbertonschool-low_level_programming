@@ -1,5 +1,5 @@
 #include "holberton.h"
-
+#include <stdio.h>
 /**
  * _strstr - check the code for Holberton School students.
  * @haystack: char pointer to be determined.
@@ -8,18 +8,29 @@
  */
 char *_strstr(char *haystack, char *needle)
 {
-	int a, b;
+	int i = 0, j = 0, k;
 
-	for (a = 0; needle[a] != '\0'; a++)
+	while (haystack[i] != '\0')
 	{
-		for (b = 0; haystack[b] != '\0'; b++)
+		k = i;
+		while (needle[j] != '\0')
 		{
-			if (needle[a] == haystack[b])
+			if (haystack[k] != needle[j])
 			{
-				continue;
+				break;
 			}
+			k++;
+			j++;
 		}
-		return (needle + a);
+		if (needle[j] == '\0')
+		{
+			return (haystack + i);
+		}
+		else
+		{
+			i++;
+			j = 0;
+		}
 	}
-	return (0);
+	return ('\0');
 }
