@@ -31,11 +31,11 @@ int pali(char *s, int ini, int fin)
 		return (0);
 
 	}
-	else if (s[ini] == s[fin])
+	else if (s[ini] == s[fin] && ini <= fin)
 	{
 		ini++;
 		fin--;
-		pali(s, ini, fin);
+		return(pali(s, ini, fin));
 	}
 
 	return (1);
