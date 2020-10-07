@@ -34,7 +34,6 @@ int pali(char *s, int ini, int fin)
 		fin--;
 		pali(s, ini, fin);
 	}
-
 	return (1);
 }
 /**
