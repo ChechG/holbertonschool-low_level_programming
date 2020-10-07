@@ -26,9 +26,9 @@ int _strlen_recursion(char *s)
  */
 int pali(char *s, int ini, int fin)
 {
-	if (ini > fin)
+	if (s[ini] != s[fin])
 	{
-		return (1);
+		return (0);
 
 	}
 	else if (s[ini] == s[fin] && ini <= fin)
@@ -38,7 +38,7 @@ int pali(char *s, int ini, int fin)
 		pali(s, ini, fin);
 	}
 
-	return (0);
+	return (1);
 }
 /**
  * is_palindrome - check the code for Holberton School students.
