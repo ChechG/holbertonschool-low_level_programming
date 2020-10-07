@@ -29,12 +29,16 @@ int pali(char *s, int ini, int fin)
 	if (s[ini] != s[fin])
 	{
 		return (0);
+
 	}
-	if (ini >= fin)
+	else if (s[ini] == s[fin] && ini >= fin)
 	{
-		return (1);
+		ini++;
+		fin--;
+		pali(s, ini, fin);
 	}
-	pali(s, (ini + 1), (fin + 1));
+
+	return (1);
 }
 /**
  * is_palindrome - check the code for Holberton School students.
