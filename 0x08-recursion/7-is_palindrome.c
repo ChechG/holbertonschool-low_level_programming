@@ -44,7 +44,7 @@ int pali(char *s, int ini, int fin)
  */
 int is_palindrome(char *s)
 {
-	int i = _strlen_recursion(s);
+	int f = _strlen_recursion(s);
 
-	return (pali(s, 0, i - 1));
+	return (pali(s, 0, f - 1));
 }
