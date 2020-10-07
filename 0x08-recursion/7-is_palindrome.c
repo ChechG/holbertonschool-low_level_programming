@@ -35,7 +35,7 @@ int pali(char *s, int ini, int fin)
 	{
 		ini++;
 		fin--;
-		return(pali(s, ini, fin));
+		return (pali(s, ini, fin));
 	}
 
 	return (1);
