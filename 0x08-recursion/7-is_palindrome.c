@@ -32,9 +32,9 @@ int pali(char *s, int ini, int fin)
 	}
 	if (ini >= fin)
 	{
-		pali(s, (ini + 1), (fin + 1));
+		return (1);
 	}
-	return (1);
+	pali(s, (ini + 1), (fin + 1));
 }
 /**
  * is_palindrome - check the code for Holberton School students.
