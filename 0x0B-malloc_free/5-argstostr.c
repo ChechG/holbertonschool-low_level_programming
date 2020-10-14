@@ -30,6 +30,8 @@ char *argstostr(int ac, char **av)
 	{
 		return (NULL);
 	}
+	else
+	{
 	i = 0;
 	for (k = 0; k < ac; k++)
 	{
@@ -38,6 +40,7 @@ char *argstostr(int ac, char **av)
 			quote[i] = av[k][j];
 		}
 		quote[i++] = '\n';
+	}
 	}
 	return (quote);
 }
