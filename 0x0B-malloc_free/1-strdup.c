@@ -34,11 +34,17 @@ char *_strdup(char *str)
 	{
 		x = _strlen(str);
 		arr = (char *)malloc(x * sizeof(char));
+		if(malloc(SIZE_MAX))
+		{
+			free(str);
+		}
+		else
+		{
 		for (i = 0; i < x; i++)
 		{
 			arr[i] = str[i];
 		}
+		}
 	}
-	free(str);
 	return (arr);
 }
