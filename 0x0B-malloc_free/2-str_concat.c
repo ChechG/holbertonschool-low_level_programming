@@ -28,10 +28,12 @@ char *str_concat(char *s1, char *s2)
 	int a, b, c, i;
 	char *arr;
 
-	if (s1 == NULL && s2 == NULL)
-	{
-		return (NULL);
-	}
+	if (s1 == NULL)
+		return (s2);
+
+	else if (s2 == NULL)
+		return (s1);
+
 	else
 	{
 		a = _strlen(s1);
