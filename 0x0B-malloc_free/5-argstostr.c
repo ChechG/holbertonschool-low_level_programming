@@ -25,13 +25,11 @@ char *argstostr(int ac, char **av)
 		}
 	}
 	cont += ac;
-	quote = (char *)malloc(cont * sizeof(char));
+	quote = (char *)malloc(cont * sizeof(char) + 1);
 	if (quote == NULL)
 	{
 		return (NULL);
 	}
-	else
-	{
 	i = 0;
 	for (k = 0; k < ac; k++)
 	{
@@ -40,7 +38,6 @@ char *argstostr(int ac, char **av)
 			quote[i] = av[k][j];
 		}
 		quote[i++] = '\n';
-	}
 	}
 	return (quote);
 }
