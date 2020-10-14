@@ -41,15 +41,14 @@ char *str_concat(char *s1, char *s2)
 		if (arr == NULL)
 			return (NULL);
 
-		for (i = 0; i <= a; i++)
+		for (i = 0; i < a; i++)
 		{
 			arr[i] = s1[i];
 		}
-		for (i = 0; i <= b; i++)
+		for (i = 0; i < b; i++)
 		{
 			arr[i + a] = s2[i];
 		}
-		return (arr);
 	}
-	return (NULL);
+	return (arr);
 }
