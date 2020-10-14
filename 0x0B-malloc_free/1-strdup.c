@@ -33,7 +33,7 @@ char *_strdup(char *str)
 	else
 	{
 		x = _strlen(str);
-		arr = (char *)malloc(x * sizeof(char));
+		arr = (char *)malloc(x * sizeof(char) + 1);
 		for (i = 0; i < x; i++)
 		{
 			arr[i] = str[i];
