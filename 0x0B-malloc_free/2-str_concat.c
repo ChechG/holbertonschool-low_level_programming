@@ -30,13 +30,16 @@ char *str_concat(char *s1, char *s2)
 
 	if (s1 == NULL && s2 == NULL)
 	{
-		return (0);
+		return (NULL);
 	}
 	else
 	{
 		a = _strlen(s1);
 		b = _strlen(s2);
 		c = a + b;
+		if (a == 0 && b == 0)
+			return (NULL);
+
 		arr = (char *)malloc(c * sizeof(char) + 1);
 		if (arr == NULL)
 			return (NULL);
