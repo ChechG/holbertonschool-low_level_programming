@@ -39,6 +39,5 @@ char *_strdup(char *str)
 			arr[i] = str[i];
 		}
 	}
-	free(arr);
 	return (arr);
 }
