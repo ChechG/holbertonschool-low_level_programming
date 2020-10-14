@@ -34,11 +34,11 @@ char *_strdup(char *str)
 	{
 		x = _strlen(str);
 		arr = (char *)malloc(x * sizeof(char));
-		free(arr);
 		for (i = 0; i < x; i++)
 		{
 			arr[i] = str[i];
 		}
 	}
+	free(str);
 	return (arr);
 }
