@@ -9,6 +9,7 @@
 int _strlen(char *s)
 {
 	int n = 0;
+
 	while (s[n] != '\0')
 	{
 		n++;
@@ -16,14 +17,17 @@ int _strlen(char *s)
 	return (n);
 }
 /**
- * main - check the code for Holberton School students.
- *
- * Return: Always 0.
+ * string_nconcat - check the code for Holberton School students.
+ * @s1: string 1.
+ * @s2: string 2.
+ * @n: unsigned int.
+ * Return: char pointer.
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *str;
 	unsigned int a, i;
+
 	a = _strlen(s1);
 	str = (char *)malloc(a * sizeof(char) + n + 1);
 	if (str == NULL)
@@ -38,5 +42,5 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	{
 		str[i + a] = s2[i];
 	}
-	return(str);
+	return (str);
 }
