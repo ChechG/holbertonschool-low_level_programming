@@ -47,14 +47,14 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	}
 	if (n >= b)
 	{
-		for (i = 0; i < b; i++)
+		for (i = 0; i <= b; i++)
 		{
 			str[i + a] = s2[i];
 		}
 	}
 	else
 	{
-		for (i = 0; i < n; i++)
+		for (i = 0; i <= n; i++)
 		{
 			str[i + a] = s2[i];
 		}
