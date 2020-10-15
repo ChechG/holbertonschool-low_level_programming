@@ -10,11 +10,12 @@
  */
 void *malloc_checked(unsigned int b)
 {
-	int *a;
-        a = (int *)malloc(b * sizeof(unsigned int));
+	void *a;
+        a = malloc(b * sizeof(INT_MAX));
 	if (a == NULL)
 	{
 		exit(98);
 	}
+	printf("%d\n", b);
 	return (a);
 }
