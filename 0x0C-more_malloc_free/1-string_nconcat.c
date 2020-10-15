@@ -30,7 +30,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 
 	a = _strlen(s1);
 	b = _strlen(s2);
-	str = (char *)malloc(a * sizeof(char) + n + 1);
+	str = (char *)malloc((a * sizeof(char)) + n + 1);
 	if (s1 == NULL)
 		s1 = "";
 
@@ -54,7 +54,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	}
 	else
 	{
-		for (i = 0; i <= n; i++)
+		for (i = 0; i < n; i++)
 		{
 			str[i + a] = s2[i];
 		}
