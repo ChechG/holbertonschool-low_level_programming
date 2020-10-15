@@ -2,6 +2,12 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+/**
+ * array_range - check the code for Holberton School students.
+ * @min: int.
+ * @max: int.
+ * Return: int pointer.
+ */
 int *array_range(int min, int max)
 {
 	int i, largo;
