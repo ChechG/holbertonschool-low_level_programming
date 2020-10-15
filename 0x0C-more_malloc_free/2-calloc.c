@@ -12,16 +12,19 @@
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
 	int *num;
+	unsigned int i;
 
-	num = (int *)malloc(nmemb * size);
-	memset(num, 0, size * nmemb);
+	if (nmemb == 0 || size == 0)
+		return (NULL);
+
+	num = malloc(nmemb * size);
 	if (num == NULL)
 	{
 		return (NULL);
 	}
-	if (nmemb == 0 || size == 0)
+	for (i = 0; i < (size * nmemb); i++)
 	{
-		return (NULL);
+		num[i] = 0;
 	}
 	return (num);
 }
