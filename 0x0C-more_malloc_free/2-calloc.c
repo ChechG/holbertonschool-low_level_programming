@@ -14,6 +14,7 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	void *num;
 
 	num = (int *)malloc(nmemb * size);
+	memset(num, 0, size * nmemb);
 	if (num == NULL)
 	{
 		return(NULL);
@@ -22,6 +23,5 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	{
 		return (NULL);
 	}
-	memset(num, 0, size);
 	return (num);
 }
