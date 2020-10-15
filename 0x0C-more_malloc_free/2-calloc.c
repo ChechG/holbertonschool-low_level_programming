@@ -13,15 +13,15 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 {
 	void *num;
 
-	num = malloc(nmemb * size * sizeof(unsigned int));
+	num = (unsigned int *)malloc(nmemb * size * sizeof(unsigned int));
 	if (num == NULL)
 	{
-		exit(0);
+		return(NULL);
 	}
 	if (nmemb == 0 || size == 0)
 	{
 		return (NULL);
 	}
-	memset(num, nmemb, size);
+	memset(num, 0, size);
 	return (num);
 }
