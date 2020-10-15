@@ -16,7 +16,7 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	num = malloc(nmemb * size * sizeof(unsigned int));
 	if (num == NULL)
 	{
-		return (NULL);
+		exit(0);
 	}
 	if (nmemb == 0 || size == 0)
 	{
