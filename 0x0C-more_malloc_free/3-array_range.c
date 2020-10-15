@@ -11,16 +11,16 @@ int *array_range(int min, int max)
 	{
 		return (NULL);
 	}
-	largo = max - min;
-	arr = (int *)malloc(largo * sizeof(int));
+	largo = max - min + 1;
+	arr = malloc(largo * sizeof(int));
 	if (arr == NULL)
 	{
 		free(arr);
 		return (NULL);
 	}
-	for (i = min; i <= max; i++)
+	for (i = 0; i <= largo; i++)
 	{
-		arr[i] = i;
+		arr[i] = min + i;
 	}
 	return (arr);
 
