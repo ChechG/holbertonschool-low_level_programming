@@ -13,7 +13,7 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 {
 	void *num;
 
-	num = (unsigned int *)malloc(nmemb * size * sizeof(unsigned int));
+	num = (int *)malloc(nmemb * size * sizeof(int));
 	if (num == NULL)
 	{
 		return(NULL);
