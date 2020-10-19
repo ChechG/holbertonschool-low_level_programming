@@ -3,26 +3,49 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
- * _strcpy - check the code for Holberton School students.
- * @dest: char pointer to be determined.
- * @src: char pointer to be determined.
+ * _strlen - check the code for Holberton School students.
+ * @s: int pinter to be determined.
  * Return: 0 or 1.
  */
-char *_strcpy(char *dest, char *src)
+int _strlen(char *s)
 {
-	int a = 0;
-	int b;
+	int n = 0;
 
-	while (src[a] != '\0')
-		a++;
-
-	for (b = 0; b <= a; b++)
+	while (s[n] != '\0')
 	{
-		dest[b] = src[b];
+		n++;
 	}
-	return (dest);
+	return (n);
 }
+/**
+ * _strdup - check the code for Holberton School students.
+ * @str: char pointer to be determined.
+ * Return: char.
+ */
+char *_strdup(char *str)
+{
+	int x, i;
+	char *arr;
 
+	if (str == NULL)
+	{
+		return (NULL);
+	}
+	else
+	{
+		x = _strlen(str);
+		arr = malloc(x * sizeof(char) + 1);
+		if (arr == NULL)
+		{
+			return (NULL);
+		}
+		for (i = 0; i < x; i++)
+		{
+			arr[i] = str[i];
+		}
+	}
+	return (arr);
+}
 /**
  * new_dog - Short description
  * @name: First member
@@ -34,6 +57,10 @@ char *_strcpy(char *dest, char *src)
 dog_t *new_dog(char *name, float age, char *owner)
 {
 	struct dog *nd;
+	char *nom, *due;
+
+	nom = _strdup(name);
+	due = _strdup(owner);
 
 	if (name == NULL)
 		return (NULL);
@@ -49,9 +76,9 @@ dog_t *new_dog(char *name, float age, char *owner)
 	}
 	else
 	{
-		nd->name = name;
+		nd->name = nom;
 		nd->age = age;
-		nd->owner = owner;
+		nd->owner = due;
 	}
 	return (nd);
 }
