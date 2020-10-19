@@ -60,9 +60,6 @@ dog_t *new_dog(char *name, float age, char *owner)
 	dog_t *nd;
 	char *nom, *due;
 
-	nom = _strdup(name);
-	due = _strdup(owner);
-
 	if (name == NULL || owner == NULL)
 	{
 		return (NULL);
