@@ -1,6 +1,11 @@
 #include <stdio.h>
 #include "dog.h"
-
+#include <stdlib.h>
+void free_dog(dog_t *d)
+{
+	if (d != NULL)
+		free(d);
+}
 /**
  * main - check the code for Holberton School students.
  *
