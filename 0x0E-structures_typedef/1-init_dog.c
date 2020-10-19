@@ -1,8 +1,8 @@
 #include "dog.h"
 #include <stdlib.h>
 #include <stdio.h>
-/*
- *init_dog - check the code for Holberton School students.
+/**
+ * init_dog - check the code for Holberton School students.
  * @d: pointer to struct.
  * @name: name of dog.
  * @age: age of the dog.
