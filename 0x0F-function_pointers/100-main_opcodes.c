@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "function_pointers.h"
 
 /**
  * main - check if a number is equal to 98
