@@ -9,8 +9,7 @@
  */
 int main(int argc, char *argv[])
 {
-	unsigned char *p;
-	int i, n;
+	int n;
 
 	if (argc != 2)
 	{
