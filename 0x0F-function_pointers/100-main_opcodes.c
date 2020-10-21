@@ -9,7 +9,8 @@
  */
 int main(int argc, char *argv[])
 {
-	int n;
+	int n, i;
+	unsigned char *p;
 
 	if (argc != 2)
 	{
@@ -22,5 +23,11 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		exit(2);
 	}
+	p = (char *)main;
+	for (i = 0; i < n - 1; i++, p++)
+	{
+		printf("%02x ", p);
+	}
+	printf("%02x", *p);
 	return (0);
 }
