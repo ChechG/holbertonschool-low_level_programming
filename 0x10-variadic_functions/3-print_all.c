@@ -38,10 +38,9 @@ void printstring(char *str, va_list list)
 	char *tmp;
 
 	tmp = va_arg(list, char *);
-	if (tmp == NULL && *tmp == '\0' )
+	if (tmp == NULL)
 	{
-		printf("(nil)");
-		return;
+		tmp = "(nil)";
 	}
 
 	printf("%s%s", str, tmp);
