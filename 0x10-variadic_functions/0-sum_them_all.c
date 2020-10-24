@@ -21,5 +21,8 @@ int sum_them_all(const unsigned int n, ...)
 			result += va_arg(lista, int);
 		}
 	}
+	else if (n == 0)
+		return (0);
+
 	return (result);
 }
