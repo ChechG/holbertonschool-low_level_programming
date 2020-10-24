@@ -82,7 +82,6 @@ void print_all(const char * const format, ...)
 		y++;
 		j = 0;
 	}
-
-	printf("\n");
 	va_end(list);
+	printf("\n");
 }
