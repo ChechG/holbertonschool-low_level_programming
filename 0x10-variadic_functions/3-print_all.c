@@ -36,8 +36,8 @@ void printfloat(char *str, va_list list)
 void printstring(char *str, va_list list)
 {
 	char *tmp;
-	tmp = va_arg(list, char *);
 
+	tmp = va_arg(list, char *);
 	if (tmp == NULL)
 	{
 		printf("(nil)");
@@ -53,12 +53,12 @@ void printstring(char *str, va_list list)
 void print_all(const char * const format, ...)
 {
 	tipos type[] = {
-                {"c", printchar},
-                {"i", printint},
-                {"f", printfloat},
-                {"s", printstring},
+		{"c", printchar},
+		{"i", printint},
+		{"f", printfloat},
+		{"s", printstring},
 		{NULL, NULL}
-        };
+	};
 	int y, j;
 	va_list list;
 	char *str;
