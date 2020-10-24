@@ -67,12 +67,12 @@ void print_all(const char * const format, ...)
 	str = "";
 	y = 0;
 	j = 0;
-	while (format && format[i])
+	while (format[i] && format)
 	{
 		j = 0;
 		while (j < 4)
 		{
-			if (type[j].car[0] == format[y])
+			if (type[j].car[0] == format[i])
 			{
 				type[j].f(str, list);
 				str = ", ";
