@@ -69,7 +69,8 @@ void print_all(const char * const format, ...)
 	j = 0;
 	while (format[y] && format)
 	{
-		while (type[j].car != NULL)
+		j = 0;
+		while (j < 4)
 		{
 			if (type[j].car[0] == format[y])
 			{
@@ -80,7 +81,6 @@ void print_all(const char * const format, ...)
 			j++;
 		}
 		y++;
-		j = 0;
 	}
 	va_end(list);
 	printf("\n");
