@@ -67,7 +67,7 @@ void print_all(const char * const format, ...)
 	str = "";
 	y = 0;
 	j = 0;
-	while (format[y] && format)
+	while (format && format[i])
 	{
 		j = 0;
 		while (j < 4)
