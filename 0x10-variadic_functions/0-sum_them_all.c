@@ -13,8 +13,9 @@ int sum_them_all(const unsigned int n, ...)
 
 	result = 0;
 	if (n == 0)
+	{
 		return (0);
-
+	}
 	if (n > 0)
 	{
 		va_start(lista, n);
@@ -24,6 +25,5 @@ int sum_them_all(const unsigned int n, ...)
 		}
 		va_end(lista);
 	}
-
 	return (result);
 }
