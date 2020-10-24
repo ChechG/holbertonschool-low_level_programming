@@ -40,7 +40,7 @@ void printstring(char *str, va_list list)
 
 	if (tmp == NULL)
 	{
-		printf("((nil))");
+		printf("(nil)");
 		return;
 	}
 
