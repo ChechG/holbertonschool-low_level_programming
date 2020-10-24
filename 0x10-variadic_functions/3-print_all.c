@@ -67,7 +67,7 @@ void print_all(const char * const format, ...)
 	str = "";
 	y = 0;
 	j = 0;
-	while (format[y] != '\0' && format != NULL)
+	while (format[y] && format)
 	{
 		while (type[j].car != NULL)
 		{
