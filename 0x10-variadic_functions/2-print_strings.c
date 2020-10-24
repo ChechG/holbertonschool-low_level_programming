@@ -3,9 +3,10 @@
 #include "variadic_functions.h"
 
 /**
- * main - check the code for Holberton School students.
- *
- * Return: Always 0.
+ * print_strings - check the code for Holberton School students.
+ * @separator: coma y espacio.
+ * @n: number of arguments.
+ * Return: void.
  */
 void print_strings(const char *separator, const unsigned int n, ...)
 {
