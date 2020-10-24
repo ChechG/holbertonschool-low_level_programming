@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include "variadic_functions.h"
 /**
- * void print_numbers - check the code for Holberton School students.
+ * print_numbers - check the code for Holberton School students.
  * @separator: pointer to string.
  * @n: number of arguments
  * Return: void.
