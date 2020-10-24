@@ -67,11 +67,11 @@ void print_all(const char * const format, ...)
 	str = "";
 	y = 0;
 	j = 0;
-	while (format[y] != '\0' && format != NULL)
+	while (format[y] != '\0')
 	{
 		while (type[j].car != NULL)
 		{
-			if (type[j].car[0] == format[y])
+			if (type[j].car[0] == format[y] && format != NULL)
 			{
 				type[j].f(str, list);
 				str = ", ";
@@ -80,7 +80,7 @@ void print_all(const char * const format, ...)
 			j++;
 		}
 		y++;
-		j = 0;
+	        j = 0;
 	}
 	va_end(list);
 	printf("\n");
