@@ -38,7 +38,7 @@ void printstring(char *str, va_list list)
 	char *tmp;
 
 	tmp = va_arg(list, char *);
-	if (tmp == NULL)
+	if (tmp == NULL && *tmp == '\0' )
 	{
 		printf("(nil)");
 		return;
