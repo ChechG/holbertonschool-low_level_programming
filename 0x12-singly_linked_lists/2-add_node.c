@@ -16,6 +16,9 @@ list_t *add_node(list_t **head, const char *str)
 		i++;
 	}
 	aux = malloc(sizeof(list_t));
+	if (aux == NULL)
+		return (NULL);
+
 	aux->str = string;
 	aux->len = i;
 	aux->next = *head;
