@@ -1,9 +1,9 @@
 #include "lists.h"
 
 /**
- * main - check the code for Holberton School students.
- *
- * Return: Always 0.
+ * print_list - prints the elements of the structure h..
+ * @h: struct list_t from main.
+ * Return: nodes.
  */
 
 size_t print_list(const list_t *h)
