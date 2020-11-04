@@ -3,7 +3,7 @@
 /**
  * get_nodeint_at_index - prints the elements of the structure h..
  * @head: struct list_t from main.
- * @index - integer.
+ * @index: - integer.
  * Return: nodes.
  */
 listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
@@ -12,7 +12,7 @@ listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
 	listint_t *nodo = head;
 
 	if (nodo == NULL)
-		return NULL;
+		return (NULL);
 
 	for (i = 0; i < index; i++)
 	{
