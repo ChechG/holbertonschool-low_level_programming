@@ -8,6 +8,7 @@
 void print_binary(unsigned long int n)
 {
 	unsigned long int m = n;
+
 	if (n > 1)
 	{
 		m = n & 1;
