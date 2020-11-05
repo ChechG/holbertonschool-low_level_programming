@@ -49,7 +49,8 @@ unsigned int binary_to_uint(const char *b)
 		c += (b[i] - '0') * potencia;
 		potencia *= 10;
 	}
-	while (c != 0) {
+	while (c != 0)
+	{
 		rem = c % 10;
 		c /= 10;
 		dec += rem * _pow_recursion(2, j);
