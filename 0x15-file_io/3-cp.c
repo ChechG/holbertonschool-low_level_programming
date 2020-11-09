@@ -26,9 +26,9 @@ int main(int ac, char **av)
 	{
 		dprintf(2, "Error: Can't write to %s\n", av[2]), exit(99);
 	}
-	fdwr = write(fdto, buf, rd);
 	buf = malloc(sizeof(char) * 1024);
         rd = read(fdfrom, buf, 1023);
+        fdwr = write(fdto, buf, rd);
 	closeto = close(fdto);
 	closefrom = close(fdfrom);
 	if (closeto == -1)
