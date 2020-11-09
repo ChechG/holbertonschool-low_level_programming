@@ -28,10 +28,15 @@ int main(int ac, char **av)
 		dprintf(2, "Error: Can't close fd %s\n", av[2]);
 		exit(99);
 	}
-	rd = read(fdfrom, buf, 1024);
+	rd = read(fdfrom, buf, 1023);
 	write(fdto, buf, rd);
 	close(fdto);
 	close(fdfrom);
+	if (fdto == -1)
+	{
+		dprintf(2, "Error: Can't close fd FD_VALUE");
+		exit(100);
+	}
 
 	return (0);
 
