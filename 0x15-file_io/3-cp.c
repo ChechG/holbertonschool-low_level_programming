@@ -1,5 +1,6 @@
 #include "holberton.h"
 
+void close_func(int a);
 /**
  * main - check the code for Holberton School students.
  * @ac: number of arguments.
@@ -8,7 +9,7 @@
  */
 int main(int ac, char **av)
 {
-	int fdto, fdfrom, rd = 1, fdwr, closeto, closefrom;
+	int fdto, fdfrom, rd = 1, fdwr;
 	char *buf;
 
 	if (ac != 3)
@@ -43,17 +44,23 @@ int main(int ac, char **av)
 			}
 		}
 	}
-	closeto = close(fdto);
-	closefrom = close(fdfrom);
-	if (closeto == -1)
-	{
-		dprintf(2, "Error: Can't close fd %d\n", fdto);
-		exit(100);
-	}
-	if (closefrom == -1)
-	{
-		dprintf(2, "Error: Can't close fd %d\n", fdfrom);
-		exit(100);
-	}
+	close_func(fdto);
+	close_func(fdfrom);
 	return (0);
+}
+/**
+ * close_func - check the code for Holberton School students.
+ * @a: int fd.
+ * Return: void.
+ */
+void close_func(int a)
+{
+	int close_a;
+
+	close_a = close(a);
+	if (close_a == -1)
+	{
+		dprintf(2, "Error: Can't close fd %d\n", a);
+		exit(100);
+	}
 }
