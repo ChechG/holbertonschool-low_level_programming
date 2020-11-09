@@ -18,11 +18,11 @@ int main(int ac, char **av)
 	}
 	fdto = open(av[2], O_WRONLY | O_CREAT | O_TRUNC, 00664);
 	fdfrom = open(av[1], O_RDONLY);
-	if (fdfrom == -1 || rd == -1)
+	if (fdfrom == -1)
 	{
 		dprintf(2, "Error: Can't read from file %s\n", av[1]), exit(98);
 	}
-	if (fdto == -1 || fdwr == -1)
+	if (fdto == -1)
 	{
 		dprintf(2, "Error: Can't write to %s\n", av[2]), exit(99);
 	}
