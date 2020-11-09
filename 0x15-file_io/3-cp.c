@@ -8,7 +8,7 @@
  */
 int main(int ac, char **av)
 {
-	int fdto, fdfrom, rd;
+	int fdto, fdfrom, rd, fdwr;
 	char buf[1024];
 
 	if (ac != 3)
@@ -29,7 +29,12 @@ int main(int ac, char **av)
 		exit(99);
 	}
 	rd = read(fdfrom, buf, 1024);
-	write(fdto, buf, rd);
+	fdwr = write(fdto, buf, rd);
+	if (fdwr == -1)
+	{
+		dprintf(2, "Error: Can't read from file %s\n", av[1]);
+                exit(98);
+	}
 	close(fdto);
 	close(fdfrom);
 	if (fdto == -1)
