@@ -44,6 +44,7 @@ int main(int ac, char **av)
 			}
 		}
 	}
+	free(buf);
 	close_func(fdto);
 	close_func(fdfrom);
 	return (0);
