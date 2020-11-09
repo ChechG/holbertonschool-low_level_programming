@@ -34,12 +34,12 @@ int main(int ac, char **av)
 	closefrom = close(fdfrom);
 	if (closeto == -1)
 	{
-		dprintf(2, "Error: Can't close fd %d\n", fdto);
+		dprintf(2, "Error: Can't close fd %d\n", closeto);
 		exit(100);
 	}
 	if (closefrom == -1)
 	{
-		dprintf(2, "Error: Can't close fd %d\n", fdfrom);
+		dprintf(2, "Error: Can't close fd %d\n", closefrom);
 		exit(100);
 	}
 
