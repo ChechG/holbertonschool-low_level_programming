@@ -25,10 +25,10 @@ int main(int ac, char **av)
 	}
 	if (fdto == -1)
 	{
-		dprintf(2, "Error: Can't close fd %s\n", av[2]);
+		dprintf(2, "Error: Can't write to %s\n", av[2]);
 		exit(99);
 	}
-	rd = read(fdfrom, buf, 1023);
+	rd = read(fdfrom, buf, 1024);
 	write(fdto, buf, rd);
 	close(fdto);
 	close(fdfrom);
