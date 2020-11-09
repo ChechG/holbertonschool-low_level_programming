@@ -38,10 +38,10 @@ int main(int ac, char **av)
 		exit(100);
 	}
 	if (fdfrom == -1)
-        {
-                dprintf(2, "Error: Can't close fd %d\n", fdfrom);
-                exit(100);
-        }
+	{
+		dprintf(2, "Error: Can't close fd %d\n", fdfrom);
+		exit(100);
+	}
 
 	return (0);
 
