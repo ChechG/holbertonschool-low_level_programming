@@ -16,7 +16,7 @@ int main(int ac, char **av)
 		dprintf(2, "Usage: cp file_from file_to\n");
 		exit(97);
 	}
-	fdto = open(av[2], O_CREAT | O_TRUNC | O_RDWR, 0664);
+	fdto = open(av[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
 	fdfrom = open(av[1], O_RDONLY);
 	buf = malloc(sizeof(char) * 1024);
 	rd = read(fdfrom, buf, 1023);
