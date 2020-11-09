@@ -8,8 +8,8 @@
  */
 int main(int ac, char **av)
 {
-	int fdto, fdfrom, rd, fdwr, closeto, closefrom;
-	char buf[1024];
+	int fdto, fdfrom, rd = 1, fdwr, closeto, closefrom;
+	char *buf;
 
 	if (ac != 3)
 	{
@@ -19,6 +19,7 @@ int main(int ac, char **av)
 	fdto = open(av[2], O_CREAT | O_TRUNC | O_RDWR, 0664);
 	fdfrom = open(av[1], O_RDONLY);
 	rd = read(fdfrom, buf, 1023);
+	buf = malloc(sizeof(char) * 1024);
 	if (fdfrom == -1 || rd == -1)
 	{
 		dprintf(2, "Error: Can't read from file %s\n", av[1]);
@@ -42,7 +43,5 @@ int main(int ac, char **av)
 		dprintf(2, "Error: Can't close fd %d\n", fdfrom);
 		exit(100);
 	}
-
 	return (0);
-
 }
