@@ -32,7 +32,7 @@ int main(int ac, char **av)
 	write(fdto, buf, rd);
 	close(fdto);
 	close(fdfrom);
-	if (fdto == -1)
+	if (fdto == -1 || fdfrom == -1)
 	{
 		dprintf(2, "Error: Can't close fd FD_VALUE");
 		exit(100);
