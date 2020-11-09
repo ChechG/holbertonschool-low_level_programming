@@ -23,7 +23,7 @@ int main(int ac, char **av)
 		dprintf(2, "Error: Can't read from file %s\n", av[1]);
 		exit(98);
 	}
-        rd = read(fdfrom, buf, 1024);
+	rd = read(fdfrom, buf, 1024);
 	fdwr = write(fdto, buf, rd);
 	if (fdto == -1 || fdwr == -1)
 	{
