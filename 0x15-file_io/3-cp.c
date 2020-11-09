@@ -16,7 +16,7 @@ int main(int ac, char **av)
 		dprintf(2, "Usage: cp file_from file_to\n");
 		exit(97);
 	}
-	fdto = open(av[2], O_CREAT | O_TRUNC | O_WRONLY, 0664);
+	fdto = open(av[2], O_CREAT | O_TRUNC | O_RDWR, 0664);
 	fdfrom = open(av[1], O_RDONLY);
 	rd = read(fdfrom, buf, 1024);
 	if (fdfrom == -1 || rd == -1)
