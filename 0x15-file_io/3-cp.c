@@ -21,12 +21,12 @@ int main(int ac, char **av)
 	if (fdfrom == -1)
 	{
 		dprintf(2, "Error: Can't read from file %s\n", av[1]);
-		exit(99);
+		exit(98);
 	}
 	if (fdto == -1)
 	{
 		dprintf(2, "Error: Can't close fd %s\n", av[2]);
-		exit(98);
+		exit(99);
 	}
 	rd = read(fdfrom, buf, 1023);
 	write(fdto, buf, rd);
