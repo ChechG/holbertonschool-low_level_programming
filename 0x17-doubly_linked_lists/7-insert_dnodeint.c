@@ -18,7 +18,7 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 		return (NULL);
 	}
 	nodo->n = n;
-	temp = (*head);
+	new = (*head);
 	if (idx == 0)
 	{
 		nodo->n = n;
