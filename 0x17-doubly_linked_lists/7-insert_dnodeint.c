@@ -30,7 +30,7 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 		}
 		return (nodo);
 	}
-	for (i = 0; new->next ! NULL || i + 1 == idx; i++)
+	for (i = 0; new->next != NULL || i + 1 == idx; i++)
 	{
 		if (i + 1 == idx)
 		{
