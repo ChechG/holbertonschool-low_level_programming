@@ -30,8 +30,8 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 			nodo->n = n;
 			nodo->next = (*h);
 			(*h) = nodo;
-			return (nodo);
 		}
+		return (nodo);
 	}
 	for (i = 0; i < idx - 1 && new != NULL; i++)
 	{
