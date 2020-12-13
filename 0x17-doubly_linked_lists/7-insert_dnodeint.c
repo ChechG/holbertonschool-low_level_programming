@@ -11,12 +11,12 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	unsigned int i;
 	dlistint_t *nodo, *new;
 
+	if (*h == NULL || h == NULL)
+		return (NULL);
 	nodo = malloc(sizeof(dlistint_t));
 	if (nodo == NULL)
 		return (NULL);
 	new = (*h);
-	if (new == NULL)
-		return (NULL);
 	nodo->prev = NULL;
 	nodo->next = NULL;
 	nodo->n = n;
