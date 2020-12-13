@@ -18,12 +18,12 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 		return (NULL);
 	}
 	nodo->n = n;
-	new = (*head);
+	new = (*h);
 	if (idx == 0)
 	{
 		nodo->n = n;
-		nodo->next = (*head);
-		(*head) = nodo;
+		nodo->next = (*h);
+		(*h) = nodo;
 		return (nodo);
 	}
 	for (i = 0; i < idx - 1 && new != NULL; i++)
