@@ -20,12 +20,12 @@ void hash_table_print(const hash_table_t *ht)
 			if (flag == 0)
 			{
 				printf("'%s': ", aux->key);
-				printf("'%s'", aux[i]->value);
+				printf("'%s'", aux->value);
 				flag = 1;
 			}
 			else
 			{
-				printf(", '%s': ", aux[i]->key);
+				printf(", '%s': ", aux->key);
 				printf("'%s'", aux->value);
 			}
 			aux = aux->next;
