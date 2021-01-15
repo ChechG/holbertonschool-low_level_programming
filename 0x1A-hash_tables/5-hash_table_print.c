@@ -19,21 +19,18 @@ void hash_table_print(const hash_table_t *ht)
 		for (i = 0; i < ht->size; i++)
 		{
 			aux = (ht->array)[i];
-			if (aux != NULL)
-			{
-				if (i == j)
-				{
-					printf("'%s': ", ht->array[i]->key);
-					printf("'%s'", ht->array[i]->value);
-				}
-				else
-				{
-					printf(", '%s': ", ht->array[i]->key);
-					printf("'%s'", ht->array[i]->value);
-				}
-			}
 			if (aux == NULL)
 				continue;
+			if (i == j)
+			{
+				printf("'%s': ", ht->array[i]->key);
+				printf("'%s'", ht->array[i]->value);
+			}
+			else
+			{
+				printf(", '%s': ", ht->array[i]->key);
+				printf("'%s'", ht->array[i]->value);
+			}
 		}
 	}
 	printf("}\n");
