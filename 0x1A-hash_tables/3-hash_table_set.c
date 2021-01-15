@@ -18,22 +18,12 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	if (new_node == NULL)
 		return (0);
 	current = ht->array[index];
-	while (current != NULL)
-	{
-		if (strcmp(current->key, key))
-		{
-			free(current->value);
-			current->value = strdup(value);
-			return (1);
-		}
-		current = current->next;
-	}
 	new_node->key = strdup(key);
 	new_node->value = strdup(value);
-	if ((ht->array)[index] != NULL)
+	if (current != NULL)
 	{
-		new_node->next = (ht->array)[index];
+		new_node->next = current;
 	}
-	(ht->array)[index] = new_node;
+	current = new_node;
 	return (1);
 }
