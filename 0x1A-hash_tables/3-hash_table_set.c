@@ -9,9 +9,12 @@
 
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
-	hash_node_t *new_node = malloc(ht->size * sizeof(hash_node_t *));
+	hash_node_t *new_node;
 	unsigned long int index = key_index((unsigned const char*)key, ht->size);
 
+	if (ht == NULL)
+		return (0);
+	new_node = malloc(ht->size * sizeof(hash_node_t *));
 	if (new_node == NULL)
 		return (0);
 	if (!key)
