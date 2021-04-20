@@ -45,9 +45,7 @@ int jump_search(int *array, size_t size, int value)
 		if (j == prev)
 			break;
 	}
-	if (array[prev] == value)
-		return (prev);
-	return (0);
+	return (prev);
 }
 /**
  * mini - finds min num between a and b
