@@ -33,11 +33,16 @@ int jump_search(int *array, size_t size, int value)
 		return (prev);
 	return (-1);
 }
-
+/**
+ * mini - finds min num between a and b
+ * @a: first number
+ * @b: second number
+ * Return: min num
+ */
 int mini(int a, int b)
 {
 	if (a >= b)
-		return b;
+		return (b);
 	else
-		return a;
+		return (a);
 }
