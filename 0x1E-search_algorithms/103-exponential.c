@@ -1,27 +1,34 @@
 #include "search_algos.h"
 /**
- * binarySearch - search for value array of int
+ * binary_search - search for value array of int (Linear search algorithm)
  * @array: array of ints
- * @l: left value
- * @r: right value
- * @value: value to compare
+ * @size: num of elements in array
+ * @value: value to search for
  * Return: index of value
  */
-int binarySearch(int *array, int l, int r, int value)
+int binary_search(int *array, size_t size, int value)
 {
-	int mid;
+	size_t left = 0, right = size - 1, med, i;
 
-	if (r >= l)
+	if (array == NULL)
+		return (-1);
+	while (left <= right)
 	{
-		mid = l + (r - l) / 2;
-		if (array[mid] == value)
-			return (mid);
-		if (array[mid] > value)
-			return (binarySearch(array, l, mid - 1, value));
-		return (binarySearch(array, mid + 1, r, value));
+		printf("Searching in array: ");
+		for (i = left; i < right; i++)
+			printf("%d, ", array[i]);
+		printf("%d\n", array[i]);
+		med = (left + right) / 2;
+		if (array[med] < value)
+			left = med + 1;
+		else if (array[med] > value)
+			right = med - 1;
+		else
+			return (med);
 	}
 	return (-1);
 }
+
 /**
  * exponential_search - search for value array of int
  * @array: array of ints
@@ -42,7 +49,7 @@ int exponential_search(int *array, size_t size, int value)
 		i = i * 2;
 	}
 	printf("Value found between indexes [%li] and [%li]\n", i / 2, i);
-	return (binarySearch(array, i / 2, mini(i, size - 1), value));
+	return (binary_search(array, size, value));
 }
 
 /**
