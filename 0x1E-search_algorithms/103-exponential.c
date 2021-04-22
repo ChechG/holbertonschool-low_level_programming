@@ -1,6 +1,6 @@
 #include "search_algos.h"
 /**
- * binary_search - search for value array of int (Linear search algorithm)
+ * binary_search - search for value array of int
  * @array: array of ints
  * @size: num of elements in array
  * @value: value to search for
@@ -38,30 +38,21 @@ int binary_search(int *array, size_t size, int value)
  */
 int exponential_search(int *array, size_t size, int value)
 {
-	size_t i;
+	size_t i, right = 0;
 
 	if (array[0] == value)
 		return (0);
 	i = 1;
-	while (i < size && array[i] <= value)
+	while (i < size && array[i] < value)
 	{
 		printf("Value checked array[%li] = [%d]\n", i, array[i]);
 		i = i * 2;
 	}
-	printf("Value found between indexes [%li] and [%li]\n", i / 2, i);
-	return (binary_search(array, size, value));
-}
-
-/**
- * mini - finds min num between a and b
- * @a: first number
- * @b: second number
- * Return: min num
- */
-size_t mini(size_t a, size_t b)
-{
-	if (a >= b)
-		return (b);
+	if (i == size)
+		right = i - 1;
 	else
-		return (a);
+		right = i;
+	i /= 2;
+	printf("Value found between indexes [%li] and [%li]\n", i, right);
+	return (binary_search(array + (i / 2), size - (i / 2), value));
 }
