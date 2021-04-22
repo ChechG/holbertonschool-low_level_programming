@@ -39,10 +39,10 @@ int jump_search(int *array, size_t size, int value)
 	for (j = s1 * (i - 1); j < s1 * i; j++)
 	{
 		printf("Value checked array[%lu] = [%d]\n", j, array[j]);
-		if (j == prev)
+		if (array[j] == value)
 			break;
 	}
-	return (prev);
+	return (j);
 }
 /**
  * mini - finds min num between a and b
